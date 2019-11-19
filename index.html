@@ -15,22 +15,33 @@
         <h1 class="main-heading">ECommerce Checkout</h1>
     </header>
     <main>
+        <form class="loan-form">
             <article>
-                    <hr>
-                    <div class="loan-details">
-                        <p>Product Quantity</p>
-                        <p>Unit Price</p>
-                        <p>Extended Price</p>
+                <hr>
+                <div class="loan-details">
+                    <p>Product Quantity</p>
+                    <p>Unit Price</p>
+                    <p>Extended Price</p>
+
+                </div>
+                <div class="loan-part">
+                    <div>
+                            <label>Pants</label>
+
+                            <input type="button" value="-" id="minusButton" class="minus-button">
+                            <label id="pantsQty">0</label>
+                            <input type="button" value="+" id="plusButton" class="plus-button">
         
-                        <label id="loanAmountDetail"></label>
-                        <label id="interestRateDetail"></label>
-                        <label id="numberofYearsDetail"></label>
-                        <label id="monthlyPaymentsDetail"></label>
+                            <label class="dollar-sign">$ 40.99</label>
+                            <label class="dollar-sign">$ </label>
+                            <input type="number" id="loanAmount">
                     </div>
-                    <div class="cal-button">
-                            <input type="button" value="Calculate" id="calculateButton" class="calcu-button">
-                        </div>
-                </article>
+                </div>
+                <div class="cal-button">
+                    <input type="button" value="Calculate" id="calculateButton" class="calcu-button">
+                </div>
+            </article>
+        </form>
     </main>
     <footer>
         <div class="footer-section">
