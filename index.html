@@ -5,50 +5,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ecommerce Checkout</title>
-    <meta name="author" content="Avleen">
-    <link rel="stylesheet" href="/css/index.css?v=1.0">
+    <title>ECommerce</title>
+    <link rel="stylesheet" href="/css/index.css">
 </head>
 
 <body>
-    <header>
-        <h1 class="main-heading">ECommerce Checkout</h1>
-    </header>
-    <main>
-        <form class="loan-form">
-            <article>
-                <hr>
-                <div class="loan-details">
-                    <p>Product Quantity</p>
-                    <p>Unit Price</p>
-                    <p>Extended Price</p>
+    <div id="main">
+        <h1> ECommerce Checkout</h1>
 
-                </div>
-                <div class="loan-part">
-                    <div>
-                            <label>Pants</label>
+        <table>
 
-                            <input type="button" value="-" id="minusButton" class="minus-button">
-                            <label id="pantsQty">0</label>
-                            <input type="button" value="+" id="plusButton" class="plus-button">
-        
-                            <label class="dollar-sign">$ 40.99</label>
-                            <label class="price"></label>
-                    </div>
-                </div>
-                <div class="cal-button">
-                    <input type="button" value="Calculate" id="calculateButton" class="calcu-button">
-                </div>
-            </article>
-        </form>
-    </main>
-    <footer>
-        <div class="footer-section">
-            <p>Have a promo code?</p>
-            <input type="button" value="Click to Enter" id="calculateButton" class="calcu-button">
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Unit Price </th>
+                <th>Extended Price</th>
+            </tr>
+
+            <tr>
+                <td>Pants</td>
+                <td><button id="dcrmnt"> - </button>
+                    <div id="quantity">0</div> <button id="incrmnt"> +</button>
+                </td>
+                <td>
+                    <div id="unitPrice">40.99</div>
+                </td>
+                <td>
+                    <div id="extndpr">0.00</div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Shirts</td>
+                <td><button id="dcrmntFrShrts"> - </button>
+                    <div id="quantityOfShrts">0</div> <button id="incrmntFrShrts"> +</button>
+                </td>
+                <td>
+                    <div id="unitPriceForShrts">10.99</div>
+                </td>
+                <td>
+                    <div id="extndprForShrts">0.00</div>
+                </td>
+            </tr>
+
+        </table>
+
+        <button id="Calculate">Calculate</button>
+
+        <div id="calculatedAmount">
+
+            <ul>
+                <li>Subtotal: <div id="subTotal"> </div>
+                </li>
+                <li>Tax: <div id="tax"> </div>
+                </li>
+                <li>Total: <div id="total"> </div>
+                </li>
+            </ul>
+
+            <p>Have a promo code? <button id="promoBtn">Click To Enter</button></p>
+
         </div>
-    </footer>
-    <script src="/js/index.js"></script>
+    </div>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
