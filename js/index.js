@@ -1,4 +1,3 @@
-/********VARIABLE DECLARATION *************/
 
 let quantity;
 let incBtn = document.getElementById("incrmnt");
@@ -9,7 +8,6 @@ let calcBtn = document.getElementById("Calculate");
 let promoButton = document.getElementById("promoBtn");
 let unitPrice,quantityOfShrts,untPrcFrShrts,extndedPrice,extndPrcFrShrts,totlExtndPrc,tax,totalAmount;
 
-//***********FUNCTION DECLARATION *********/
 
 function increment() {
     quantity = parseInt(document.getElementById("quantity").innerHTML);
@@ -27,7 +25,7 @@ function decrement() {
     quantity--;
 
     if (quantity < 0) {
-        alert("Come On Dude");
+        alert("VALUE SHOULD BE POSITIVE ONLY");
     }
 
     else {
@@ -56,7 +54,7 @@ function decrementForShrts() {
     quantity--;
 
     if (quantity < 0) {
-        alert("Come On Dude!");
+        alert("VALUE SHOULD BE POSITIVE ONLY");
     }
 
     else {
@@ -92,7 +90,7 @@ function getPromoCodeFromUser(){
 
     let promo = window.prompt("Have a coupon? Please Enter Here! ");
 
-    if(promo == "NOTAX")
+    if(promo == "NOTAX" || promo == "Notax")
     {
     quantity = parseInt(document.getElementById("quantity").innerHTML);
     qnttyFrShrts = parseInt(document.getElementById("quantityOfShrts").innerHTML);
@@ -113,7 +111,7 @@ function getPromoCodeFromUser(){
     document.getElementById("total").innerHTML = totalAmount;
     }
 
-    if(promo == "FIFTYFIFTY")
+    if(promo == "FIFTYFIFTY" || promo == "Fiftyfifty")
     {
     quantity = parseInt(document.getElementById("quantity").innerHTML);
     qnttyFrShrts = parseInt(document.getElementById("quantityOfShrts").innerHTML);
@@ -137,7 +135,7 @@ function getPromoCodeFromUser(){
 
 }
 
-//****************EXECUTION *********************/
+
 incBtn.addEventListener("click", increment);
 
 dcrBtn.addEventListener("click", decrement);
