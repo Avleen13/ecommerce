@@ -104,12 +104,11 @@ function applycoupon() {
 function notax() {
     let subtotal = (extendedPriceP() + extendedPriceS()).toFixed(2);
     subtotal = parseFloat(subtotal);
-    document.getElementById("subtotal").innerHTML = '$' + subtotal;
+    document.getElementById("subTotal").innerHTML = '$' + subtotal;
     document.getElementById("tax").innerHTML = '$' + 0;
     let total = subtotal;
     document.getElementById("total").innerHTML = '$' + total;
     document.getElementById("tax").style.backgroundColor = "red";
-    alert("Promo Applied Successfully");
 }
 
 function fiftyfifty() {
@@ -123,7 +122,6 @@ function fiftyfifty() {
     let total = subtotal + tax;
     total = total.toFixed(2);
     document.getElementById("total").innerHTML = '$' + total;
-    alert("promoCode Applied Successfully");
 }
 
 //event listeners of buttons and execution
